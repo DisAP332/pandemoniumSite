@@ -21,9 +21,12 @@ const initialState: IState = {
 
 export const fetchData = createAsyncThunk("site/fetchData", async () => {
   try {
-    const response = await axios.get("https://perodactylesarefire.com/site", {
-      headers: { user: "pandemonium" },
-    });
+    const response = await axios.get(
+      "https://server.perodactylesarefire.com/site",
+      {
+        headers: { user: "pandemonium" },
+      }
+    );
     return [...response.data];
   } catch (error) {}
 });

@@ -23,7 +23,7 @@ export default function Events() {
         </div>
         <div className="eventsDisplay">
           <div className="cardContainer">
-            {status === "pending" || status === "rejected" ? (
+            {status === "pending" || status === "rejected" || !data ? (
               <h1>Loading...</h1>
             ) : (
               data[0].Events.map((items: any) => (
